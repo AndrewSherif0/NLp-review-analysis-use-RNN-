@@ -43,7 +43,7 @@ vocab_size = 20000  # عدد الكلمات الفريدة في القاموس
 max_length = 300    # الطول الأقصى لكل مراجعة
 
 # بناء النموذج
-# بناء النموذج
+
 model = Sequential([
     Embedding(input_dim=vocab_size, output_dim=128, input_length=max_length),  # طبقة التضمين
     LSTM(128, return_sequences=False, dropout=0.1, recurrent_dropout=0.1),  # استبدلنا RNN بـ LSTM
